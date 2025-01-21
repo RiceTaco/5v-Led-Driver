@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ABM8G-12.000MHZ-B4Y-T")(type "KiCad")(uri "${KIPRJMOD}/Parts/ABM8G_12/ABM8G_12_000MHZ_B4Y_T/ABM8G-12.000MHZ-B4Y-T.kicad_sym")(options "")(descr ""))
+  (lib (name "PTS815_SJM_250_SMTR_LFS")(type "KiCad")(uri "${KIPRJMOD}/Parts/PTS815/PTS815_SJM_250_SMTR_LFS/KiCADv6/2024-05-30_02-15-29.kicad_sym")(options "")(descr ""))
+  (lib (name "RP2040")(type "KiCad")(uri "${KIPRJMOD}/Parts/RP2040/RP2040/RP2040.kicad_sym")(options "")(descr ""))
+  (lib (name "RT6150B-33GQW")(type "KiCad")(uri "${KIPRJMOD}/Parts/RT6150B/RT6150B_33GQW/RT6150B-33GQW.kicad_sym")(options "")(descr ""))
+  (lib (name "W25Q16JVUXIQ_TR")(type "KiCad")(uri "${KIPRJMOD}/Parts/W25Q16/W25Q16JVUXIQ_TR/KiCADv6/2024-05-29_20-28-26.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,3 @@
+[submodule "Main/Submodule/pico-extras"]
+	path = Main/Submodule/pico-extras
+	url = https://github.com/raspberrypi/pico-extras

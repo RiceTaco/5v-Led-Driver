@@ -1,38 +1,62 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "hardware/spi.h"
-#include "hardware/i2c.h"
 #include "hardware/pio.h"
-#include "hardware/interp.h"
-#include "hardware/timer.h"
-#include "hardware/watchdog.h"
-#include "hardware/clocks.h"
+#include "hardware/gpio.h"
 #include "pwmRead.pio.h"
 
-void pwmSetup() {
-     PIO pio = pio0;
-    uint sm_id = pio_claim_unused_sm(pio, true);
+PIO pio = pio0;
+uint sm = 0;
+class ledStrip {
+    public:
+        
+        ledStrip(uint8_t pin) : pin(pin) {
+            gpio_init(pin);
+            gpio_set_dir(pin, GPIO_OUT);
+        }
+        void setBrightness(uint8_t brightness) {
+            gpio_put(pin, brightness);
+        }
+        void turnOff() {
+            gpio_put(pin, 0);
+        }
+        void setPin(uint8_t pin) {
+            this->pin = pin;
+        }
+        void setPattern(uint8_t pattern) {
+            this->pattern = pattern;
+        }
 
+
+      
+    private:
+        uint8_t pin;
+        uint8_t pattern;
+};
+
+
+// Define the pwm_reader_program
+extern const pio_program_t pwm_reader_program;
+
+void setupPWMReader(uint pin) {
     uint offset = pio_add_program(pio, &pwm_reader_program);
-    pio_sm_config c = pwm_reader_program_get_default_config(offset);1
+    pio_sm_config c = pio_get_default_sm_config();
+    sm_config_set_wrap(&c, offset, offset + pwm_reader_program.length - 1);
 
-    // Configure the GPIO pin for input
-    pio_gpio_init(pio, 2); // Change 2 to the desired GPIO pin
-    pio_sm_set_consecutive_pindirs(pio, sm_id, 2, 1, false);
+    // Map the state machine's 'in' pin to the specified GPIO
+    sm_config_set_in_pins(&c, pin);
+    pio_gpio_init(pio, pin);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, false);
 
-    pio_sm_init(pio, sm_id, offset, &c);
-    pio_sm_set_enabled(pio, sm_id, true);
-
+    // Initialize the state machine
+    pio_sm_init(pio, sm, offset, &c);
+    pio_sm_set_enabled(pio, sm, true);
 }
 
-void readPWM() {        
-    uint32_t high_time = pio_sm_get_blocking(pio, sm_id);
-    uint32_t low_time = pio_sm_get_blocking(pio, sm_id);
-
-    // Calculate duty cycle and frequency
-    printf("Duty Cycle: %f%%\n", (float)high_time / (high_time + low_time) * 100);
-    printf("Frequency: %f Hz\n", 125000000.0 / (high_time + low_time));
+void readPWM(uint &high_time, uint &low_time) {
+    high_time = pio_sm_get_blocking(pio, sm);
+    low_time = pio_sm_get_blocking(pio, sm);
 }
+
 int main()
 {
     stdio_init_all();

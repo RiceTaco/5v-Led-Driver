@@ -1,0 +1,22 @@
+.program pwm_reader
+; Wait for high signal
+wait 1 pin, 0
+set x, 0          ; Reset counter
+high_count:
+    jmp pin high_continue [1]
+    jmp high_done
+high_continue:
+    jmp high_count
+high_done:
+    mov isr, x    ; Move high duration to ISR
+    push          ; Push to FIFO
+
+; Wait for low signal
+wait 0 pin, 0
+set x, 0
+low_count:
+    jmp pin low_done [1]
+    jmp low_count
+low_done:
+    mov isr, x    ; Move low duration to ISR
+    push          ; Push to FIFO

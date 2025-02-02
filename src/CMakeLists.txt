@@ -41,7 +41,7 @@ pico_set_program_name(5v_Led_Driver "5v_Led_Driver")
 pico_set_program_version(5v_Led_Driver "0.1")
 
 # Generate PIO header
-pico_generate_pio_header(5v_Led_Driver ${CMAKE_CURRENT_LIST_DIR}/blink.pio)
+pico_generate_pio_header(5v_Led_Driver ${CMAKE_CURRENT_LIST_DIR}/pwmRead.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(5v_Led_Driver 0)
@@ -50,11 +50,14 @@ pico_enable_stdio_usb(5v_Led_Driver 0)
 # Add the standard library to the build
 target_link_libraries(5v_Led_Driver
         pico_stdlib)
+# Add any user requested libraries
+target_include_directories(${PROJECT_NAME} PRIVATE
 
-# Add the standard include files to the build
-target_include_directories(5v_Led_Driver PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}
-)
+        ${CMAKE_CURRENT_LIST_DIR}
+    
+        ${CMAKE_CURRENT_LIST_DIR}/path/to/pwmRead
+    
+    )
 
 # Add any user requested libraries
 target_link_libraries(5v_Led_Driver 

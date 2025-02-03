@@ -4248,6 +4248,10 @@
 		(uuid "039c4718-e31e-495c-aa73-5ff7899c146e")
 	)
 	(no_connect
+		(at 109.22 148.59)
+		(uuid "09dfdfff-a18b-4dce-9acb-63f5b0b2cf44")
+	)
+	(no_connect
 		(at 63.5 118.11)
 		(uuid "1a627b7b-e917-46b8-bfb0-2afbbbc62fde")
 	)
@@ -4300,16 +4304,16 @@
 		(uuid "68ed57e0-c795-46c9-92b8-46d35eb70920")
 	)
 	(no_connect
-		(at 109.22 166.37)
-		(uuid "7d76c05d-ee55-49cd-bdba-4c9b2ed7f176")
-	)
-	(no_connect
 		(at 63.5 156.21)
 		(uuid "838185c5-e86b-482f-bc7c-8c79aead4255")
 	)
 	(no_connect
 		(at 63.5 148.59)
 		(uuid "93c2ee32-e501-4052-bbaa-8f01c35d0c2e")
+	)
+	(no_connect
+		(at 195.58 114.3)
+		(uuid "9674b291-b0be-44e6-ade8-c752d2e3f857")
 	)
 	(no_connect
 		(at 63.5 120.65)
@@ -4322,6 +4326,10 @@
 	(no_connect
 		(at 109.22 173.99)
 		(uuid "a5588025-4ab4-4f9a-9452-c57494e21d6b")
+	)
+	(no_connect
+		(at 109.22 146.05)
+		(uuid "aeb5630b-1d49-4350-b06a-1447602660bb")
 	)
 	(no_connect
 		(at 63.5 143.51)
@@ -5123,16 +5131,6 @@
 		)
 		(uuid "05ea02df-a93b-4be5-b002-6dc6dcd882b5")
 	)
-	(text "I2C In & Out"
-		(exclude_from_sim no)
-		(at 204.216 122.682 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-		)
-		(uuid "55ab7b79-61e4-4e09-97c8-ac9a4f8fe8dc")
-	)
 	(text "MicroController"
 		(exclude_from_sim no)
 		(at 35.052 83.566 0)
@@ -5192,6 +5190,17 @@
 			)
 		)
 		(uuid "e342f0f5-5b06-4782-9b31-78217d74ad52")
+	)
+	(label "PWM IN"
+		(at 109.22 166.37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0069b5a0-34dd-4e37-ac2f-6247b3182eef")
 	)
 	(label "RUN"
 		(at 63.5 180.34 180)
@@ -5280,28 +5289,6 @@
 			(justify left bottom)
 		)
 		(uuid "24d15fe0-0b47-4bd2-95ac-e4f5c2204fe1")
-	)
-	(label "I2C D-"
-		(at 109.22 146.05 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "26ba8176-25ba-4d3e-b027-3471093c4ac5")
-	)
-	(label "I2C D+"
-		(at 195.58 114.3 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2c332da6-d2bf-4c99-a5bf-e7af50acc1c7")
 	)
 	(label "LED OUT"
 		(at 63.5 140.97 180)
@@ -5412,17 +5399,6 @@
 			(justify left bottom)
 		)
 		(uuid "6584b80d-a64f-4412-a25e-300cad9aa4fd")
-	)
-	(label "I2C D+"
-		(at 109.22 148.59 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6637eb5f-ef4d-4143-bd86-065fd9d812bc")
 	)
 	(label "3V3"
 		(at 22.86 95.25 0)
@@ -5555,6 +5531,17 @@
 			(justify right bottom)
 		)
 		(uuid "8ef30776-9e3e-4afe-8ff1-7fea673af137")
+	)
+	(label "PWM IN"
+		(at 195.58 116.84 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "97fd4ba6-9265-4839-8fa3-6964e14b797b")
 	)
 	(label "3V3_EN"
 		(at 198.12 86.36 0)
@@ -5721,17 +5708,6 @@
 		)
 		(uuid "d1a6e9d0-a035-4fc0-bd77-a3b25acebf1b")
 	)
-	(label "I2C D+"
-		(at 215.9 114.3 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d2176ed9-5da6-404a-94b0-8b1c4cdf90cd")
-	)
 	(label "QSPI_SCLK"
 		(at 185.42 54.61 0)
 		(fields_autoplaced yes)
@@ -5742,28 +5718,6 @@
 			(justify left bottom)
 		)
 		(uuid "d34940f5-c5fe-4fec-9274-b9b3837e2d5c")
-	)
-	(label "I2C D-"
-		(at 195.58 116.84 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d89b24f1-f094-4960-95a6-8da8223a296e")
-	)
-	(label "I2C D-"
-		(at 215.9 116.84 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "dad188ad-b9fd-4b2c-bc63-b8a0f41c60e7")
 	)
 	(label "QSPI_SD3"
 		(at 185.42 52.07 0)
@@ -7163,74 +7117,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 210.82 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4358884d-fc72-40e0-926e-853bcf5b9f7f")
-		(property "Reference" "J5"
-			(at 211.455 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x02_Pin"
-			(at 211.455 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
-			(at 210.82 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 210.82 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 210.82 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "35b126a1-b548-4da5-b874-94056f913553")
-		)
-		(pin "1"
-			(uuid "b2a28f3c-2cf4-426d-ab6f-5e416b93bb2b")
-		)
-		(instances
-			(project "5v Led Driver"
-				(path "/2f979bd2-f254-4a27-81cb-7765d8524067"
-					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 29.21 115.57 0)
 		(unit 1)
@@ -8060,6 +7946,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 195.58 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "69e202fa-09c1-4959-ba9c-9b9a4bfb55c4")
+		(property "Reference" "#PWR030"
+			(at 195.58 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 195.58 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.58 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 195.58 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea540a7f-b121-42d9-bf50-63c09992a38f")
+		)
+		(instances
+			(project "5v Led Driver"
+				(path "/2f979bd2-f254-4a27-81cb-7765d8524067"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 124.46 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8387,6 +8338,77 @@
 			(project "5v Led Driver"
 				(path "/2f979bd2-f254-4a27-81cb-7765d8524067"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 190.5 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b6d31b9-5acf-4156-85f0-c8e63a9bd915")
+		(property "Reference" "J3"
+			(at 191.135 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03_Pin"
+			(at 191.135 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal"
+			(at 190.5 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 190.5 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 190.5 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d56c9736-7c9e-4217-b35c-8ed3f34c3456")
+		)
+		(pin "2"
+			(uuid "6c649d6e-ef05-4b8b-91a1-8e85651cbeeb")
+		)
+		(pin "1"
+			(uuid "a5bba767-5d7f-40d4-9c44-a88d97534473")
+		)
+		(instances
+			(project ""
+				(path "/2f979bd2-f254-4a27-81cb-7765d8524067"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -9466,74 +9488,6 @@
 			(project "5v Led Driver"
 				(path "/2f979bd2-f254-4a27-81cb-7765d8524067"
 					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 190.5 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b168377e-cdb1-4ca8-be7b-e6a05fe663d1")
-		(property "Reference" "J3"
-			(at 191.135 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x02_Pin"
-			(at 191.135 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
-			(at 190.5 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 190.5 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 190.5 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "acf1d236-441f-4339-afee-0a89d536b266")
-		)
-		(pin "1"
-			(uuid "0c29fef0-0aff-43d8-a07c-679fbde3cd34")
-		)
-		(instances
-			(project "5v Led Driver"
-				(path "/2f979bd2-f254-4a27-81cb-7765d8524067"
-					(reference "J3")
 					(unit 1)
 				)
 			)

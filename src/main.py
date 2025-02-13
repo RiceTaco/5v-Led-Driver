@@ -81,7 +81,7 @@ class led_strip:
             time.sleep(sleep_time)
 
     "reads pwm signal and sets color based on the frequency"
-    def read_pwm(self, frequency):
+    def set_led_state(self, frequency):
         if frequency >= 1205:
             set.color(124, 46, 201)
             self.blink()
@@ -158,7 +158,7 @@ def main():
         frequency = pwm_reader.get_pwm()
         print("Frequency: {} Hz".format(frequency))
 
-        led.read_pwm(frequency)
+        led.set_led_state(frequency)
 
         time.sleep(0.1) # delay to avoid excessive updates
         

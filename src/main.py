@@ -74,10 +74,12 @@ class led_strip:
         for i in range(steps):
             brightness = max_brightness * (i / float(steps))
             self.set_brightness(brightness)
+            self.set_color(last_color)
             time.sleep(sleep_time)
         for i in range(steps):
             brightness = max_brightness * (1 - i / float(steps))
             self.set_brightness(brightness)
+            self.set_color(last_color)
             time.sleep(sleep_time)
 
     "reads pwm signal and sets color based on the frequency"

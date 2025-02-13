@@ -1,0 +1,25 @@
+key for interfacing with a pwm signal
+
+pwm singal -> microcontroller -> 5v adressable led strip
+
+1005 solid red
+1015 solid orange
+1025 solid yellow 
+1035 solid green
+1045 solid blue
+1055 solid indigo
+1065 solid voilet
+1075 red pulse effect
+1085 red blink effect
+1095 orange pulse effect
+1105 orange blink effect
+1115 yellow pulse effect
+1125 yellow blink effect
+1135 green pulse effect
+1145 green blink effect
+1155 blue pulse effect
+1165 blue blink effect
+1175 indigo pulse effect
+1185 indigo blink effect
+1195 voilet pulse effect
+1205 voilet blink effect
